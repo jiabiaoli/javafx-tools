@@ -46,5 +46,13 @@ public class FxmlServiceImpl implements FxmlService {
         tab.setContent(parent);
         pane.getTabs().add(tab);
         pane.getSelectionModel().select(tab);
+        pane.widthProperty().addListener((number)->{
+            System.out.println("number :" +number);
+        });
+        if(parent instanceof Region){
+            ((Region) parent).prefWidthProperty().bind(pane.widthProperty());
+            ((Region) parent).prefHeightProperty().bind(pane.heightProperty());
+        }
+
     }
 }

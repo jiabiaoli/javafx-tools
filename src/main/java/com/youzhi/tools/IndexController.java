@@ -40,6 +40,8 @@ public class IndexController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ToolsContext.tab(pane);
+        pane.prefHeightProperty().bind(ToolsContext.stage().heightProperty());
+        pane.prefWidthProperty().bind(ToolsContext.stage().widthProperty());
     }
 
     public void open(ActionEvent event) throws IOException {

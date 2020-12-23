@@ -1,5 +1,6 @@
 package com.youzhi;
 
+import com.youzhi.core.ToolsContext;
 import com.youzhi.core.suppurt.context.StageReadyEvent;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -36,6 +37,7 @@ public class ToolsApplication extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        ToolsContext.stage(stage);
         applicationContext.publishEvent(new StageReadyEvent(stage));
     }
 }

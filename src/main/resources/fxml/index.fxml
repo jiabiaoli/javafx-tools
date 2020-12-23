@@ -13,8 +13,7 @@
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.youzhi.tools.IndexController"
-      fx:id="parent"
-      prefHeight="400.0" prefWidth="600.0">
+      fx:id="parent">
     <children>
         <MenuBar useSystemMenuBar="true">
             <menus>

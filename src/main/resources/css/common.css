@@ -1,3 +1,24 @@
+.tab-pane {
+    -fx-background-color: transparent;
+}
+
+.tab-pane {
+    -fx-tab-min-width: 120px;
+    -fx-tab-max-width: 120px;
+    -fx-tab-min-height: 50px;
+    -fx-tab-max-height: 50px;
+}
+
+.tab {
+    -fx-font-family:Arial;
+    -fx-font-size:18;
+    -fx-background-color:royalblue;
+}
+
+.tab:selected {
+    -fx-background-color:blue;
+}
+
 
 .button.primary {
     -fx-background-color: #3254E8;
@@ -19,19 +40,22 @@
     -fx-pref-width: 80px;
     -fx-font-weight: bold;
 }
-.v-center-box{
+
+.v-center-box {
     -fx-alignment: center;
 }
-.h{
-   -fx-padding: 10 10 10 10;
+
+.h {
+    -fx-padding: 10 10 10 10;
 }
-.h .h2{
+
+.h .h2 {
     -fx-end-margin: 10;
     -fx-font-size: 18;
     -fx-font-weight: bold;
 }
 
-.h .h3{
+.h .h3 {
     -fx-end-margin: 10;
     -fx-font-size: 16;
     -fx-font-weight: bold;

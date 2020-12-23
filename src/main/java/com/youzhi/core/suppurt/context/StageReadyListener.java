@@ -3,6 +3,8 @@ package com.youzhi.core.suppurt.context;
 import com.youzhi.core.ToolsContext;
 import com.youzhi.core.properties.ToolsProperties;
 import com.youzhi.core.service.FxmlService;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -29,13 +31,12 @@ public class StageReadyListener implements ApplicationListener<StageReadyEvent> 
     @Override
     public void onApplicationEvent(StageReadyEvent event) {
         Stage stage = event.getStage();
-        stage.setScene(new Scene(fxmlService.getByPath(FXML_INDEX)));
-        stage.setWidth(800);
-        stage.setHeight(600);
+        stage.setScene(new Scene(fxmlService.getByPath(FXML_INDEX),800,600));
         Image image = new Image(new ClassPathResource("images/logo.png").getInputStream());
         stage.getIcons().add(image);
         stage.setTitle(toolsProperties.getTitle());
+        stage.sizeToScene();
         stage.show();
-        ToolsContext.stage(stage);
+
     }
 }
