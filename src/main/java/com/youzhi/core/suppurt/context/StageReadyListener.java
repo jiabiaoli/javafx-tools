@@ -1,13 +1,9 @@
 package com.youzhi.core.suppurt.context;
 
-import com.youzhi.core.ToolsContext;
 import com.youzhi.core.properties.ToolsProperties;
 import com.youzhi.core.service.FxmlService;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
