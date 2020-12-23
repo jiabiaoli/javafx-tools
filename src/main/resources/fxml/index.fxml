@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import com.youzhi.core.component.NumberTextField?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.youzhi.tools.IndexController"
+      fx:id="parent"
+      prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu text="工具">
+                    <items>
+                        <MenuItem text="open" onAction="#open"/>
+                        <MenuItem text="身体质量指数" onAction="#bmi"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TabPane fx:id="pane" >
+            <tabs>
+                <Tab text="欢迎" closable="false">
+                    <content>
+                        <VBox>
+                            <children>
+                                <Label text="label"></Label>
+                                <NumberTextField text=""></NumberTextField>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.youzhi.core.component.NumberTextField?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      stylesheets="@/css/common.css"
+      fx:id="parent"
+      fx:controller="com.youzhi.tools.bmi.controller.BmiController">
+    <HBox>
+        <children>
+            <VBox>
+                <children>
+                    <HBox styleClass="h">
+                        <children>
+                            <Label styleClass="h2" text="计算身体质量指数(BMI)"></Label>
+                        </children>
+                    </HBox>
+                    <HBox styleClass="h" fx:id="result">
+                        <children>
+                            <Label styleClass="h3" text="你的 BMI 值: "/>
+                            <Label styleClass="h3" fx:id="value"/>
+                            <Label styleClass="h3" text="，身体状态："/>
+                            <Label styleClass="h3" fx:id="status"/>
+                        </children>
+                    </HBox>
+                    <HBox styleClass="h-left-box">
+                        <children>
+                            <Label styleClass="left" text="我的身高："></Label>
+                            <NumberTextField fx:id="height"></NumberTextField>
+                            <Label text="单位:厘米 cm"></Label>
+                        </children>
+                    </HBox>
+                    <HBox styleClass="h-left-box">
+                        <children>
+                            <Label styleClass="left" text="我的体重："></Label>
+                            <NumberTextField fx:id="weight"></NumberTextField>
+                            <Label text="单位:千克 kg"></Label>
+                        </children>
+                    </HBox>
+                    <VBox styleClass="v-center-box">
+                        <children>
+                            <Button text="计算" styleClass="primary" prefWidth="161" onAction="#calc"></Button>
+                        </children>
+                    </VBox>
+                </children>
+            </VBox>
+            <VBox fx:id="rightTopBox">
+                <children>
+                    <HBox styleClass="h">
+                        <children>
+                            <Label styleClass="h2" text="BMI 标准"></Label>
+                        </children>
+                    </HBox>
+                </children>
+            </VBox>
+        </children>
+
+    </HBox>
+
+</VBox>
