@@ -1,13 +1,17 @@
 package com.youzhi.core.suppurt.context;
 
 import com.youzhi.core.ToolsContext;
+import com.youzhi.core.properties.ToolsProperties;
 import com.youzhi.core.service.FxmlService;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
 /**
@@ -19,6 +23,7 @@ import org.springframework.stereotype.Component;
 public class StageReadyListener implements ApplicationListener<StageReadyEvent> {
     private final static String FXML_INDEX = "fxml/index.fxml";
     private final FxmlService fxmlService;
+    private final ToolsProperties toolsProperties;
 
     @SneakyThrows
     @Override
@@ -27,6 +32,9 @@ public class StageReadyListener implements ApplicationListener<StageReadyEvent> 
         stage.setScene(new Scene(fxmlService.getByPath(FXML_INDEX)));
         stage.setWidth(800);
         stage.setHeight(600);
+        Image image = new Image(new ClassPathResource("images/logo.png").getInputStream());
+        stage.getIcons().add(image);
+        stage.setTitle(toolsProperties.getTitle());
         stage.show();
         ToolsContext.stage(stage);
     }

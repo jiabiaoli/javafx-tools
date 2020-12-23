@@ -16,7 +16,7 @@
       fx:id="parent"
       prefHeight="400.0" prefWidth="600.0">
     <children>
-        <MenuBar>
+        <MenuBar useSystemMenuBar="true">
             <menus>
                 <Menu text="工具">
                     <items>
@@ -33,7 +33,7 @@
                         <VBox>
                             <children>
                                 <Label text="label"></Label>
-                                <NumberTextField text=""></NumberTextField>
+                                <NumberTextField></NumberTextField>
                             </children>
                         </VBox>
                     </content>
