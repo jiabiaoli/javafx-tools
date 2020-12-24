@@ -21,16 +21,12 @@ import org.springframework.stereotype.Component;
 public class StageReadyListener implements ApplicationListener<StageReadyEvent> {
     private final static String FXML_INDEX = "fxml/index.fxml";
     private final FxmlService fxmlService;
-    private final ToolsProperties toolsProperties;
 
     @SneakyThrows
     @Override
     public void onApplicationEvent(StageReadyEvent event) {
         Stage stage = event.getStage();
         stage.setScene(new Scene(fxmlService.getByPath(FXML_INDEX),800,600));
-        Image image = new Image(new ClassPathResource("images/logo.png").getInputStream());
-        stage.getIcons().add(image);
-        stage.setTitle(toolsProperties.getTitle());
         stage.sizeToScene();
         stage.show();
 

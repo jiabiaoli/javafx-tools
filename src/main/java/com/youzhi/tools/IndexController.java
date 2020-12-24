@@ -2,6 +2,8 @@ package com.youzhi.tools;
 
 import com.youzhi.core.ToolsContext;
 import com.youzhi.core.service.FxmlService;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -40,15 +42,25 @@ public class IndexController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ToolsContext.tab(pane);
+        bind();
+    }
+
+    /**
+     * 绑定宽高,标题
+     */
+    private void bind() {
         pane.prefHeightProperty().bind(ToolsContext.stage().heightProperty());
         pane.prefWidthProperty().bind(ToolsContext.stage().widthProperty());
+        pane.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, tab) -> {
+            ToolsContext.stage().setTitle(tab.getText());
+        });
     }
 
     public void open(ActionEvent event) throws IOException {
-        fxmlService.add2Tab("Text","fxml/main.fxml");
+        fxmlService.add2Tab("Text", "fxml/main.fxml");
     }
 
     public void bmi(ActionEvent event) {
-        fxmlService.add2Tab("身体质量指数","fxml/bmi/bmi.fxml");
+        fxmlService.add2Tab("身体质量指数", "fxml/bmi/bmi.fxml");
     }
 }
