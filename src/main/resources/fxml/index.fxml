@@ -15,12 +15,13 @@
       fx:controller="com.youzhi.tools.IndexController"
       fx:id="parent">
     <children>
-        <MenuBar useSystemMenuBar="true">
+        <MenuBar>
             <menus>
                 <Menu text="工具">
                     <items>
                         <MenuItem text="open" onAction="#open"/>
                         <MenuItem text="身体质量指数" onAction="#bmi"/>
+                        <MenuItem text="图片压缩" onAction="#imageCompress"/>
                     </items>
                 </Menu>
             </menus>

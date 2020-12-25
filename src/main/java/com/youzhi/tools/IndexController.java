@@ -63,4 +63,8 @@ public class IndexController implements Initializable {
     public void bmi(ActionEvent event) {
         fxmlService.add2Tab("身体质量指数", "fxml/bmi/bmi.fxml");
     }
+
+    public void imageCompress(ActionEvent event) {
+        fxmlService.add2Tab("图片压缩", "fxml/image/compress.fxml");
+    }
 }

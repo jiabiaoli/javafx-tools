@@ -1,24 +1,3 @@
-.tab-pane {
-    -fx-background-color: transparent;
-}
-
-.tab-pane {
-    -fx-tab-min-width: 120px;
-    -fx-tab-max-width: 120px;
-    -fx-tab-min-height: 50px;
-    -fx-tab-max-height: 50px;
-}
-
-.tab {
-    -fx-font-family:Arial;
-    -fx-font-size:18;
-    -fx-background-color:royalblue;
-}
-
-.tab:selected {
-    -fx-background-color:blue;
-}
-
 
 .button.primary {
     -fx-background-color: #3254E8;
